@@ -1,0 +1,159 @@
+@import url('https://fonts.googleapis.com/css2?family=VT323&family=Courier+Prime&display=swap');
+
+body {
+    background: #0a0a0a;
+    color: #33ff33;
+    font-family: 'Courier Prime', monospace;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    position: relative;
+}
+
+body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background: repeating-linear-gradient(0deg,
+            transparent 0px,
+            transparent 1px,
+            rgba(0, 0, 0, 0.15) 1.5px,
+            rgba(0, 0, 0, 0.15) 3.5px);
+    pointer-events: none;
+    z-index: 9999;
+}
+
+h1 {
+    font-family: 'VT323', monospace;
+    font-size: 5rem;
+    color: #33ff33;
+    text-shadow: 0 0 20px #33ff3366;
+    margin-bottom: 0.5rem;
+    letter-spacing: 6px;
+    animation: flicker 4s infinite;
+}
+
+@keyframes flicker {
+
+    0%,
+    95%,
+    100% {
+        opacity: 1;
+    }
+
+    96% {
+        opacity: 0.6;
+    }
+
+    97% {
+        opacity: 1;
+    }
+
+    98% {
+        opacity: 0.4;
+    }
+
+    99% {
+        opacity: 1;
+    }
+}
+
+.subtitle {
+    font-family: 'VT323', monospace;
+    font-size: 2rem;
+    color: #22cc22;
+    margin-bottom: 0.6rem;
+    letter-spacing: 3px;
+    text-shadow: 0 0 8px #33ff3388;
+}
+
+#key-indicator {
+    margin-top: 1.5rem;
+    font-family: 'VT323', monospace;
+    font-size: 1.5rem;
+    color: #33ff33;
+    opacity: 0;
+    transition: opacity 0.1s ease;
+    text-shadow: 0 0 8px #33ff33;
+}
+
+#key-indicator.show {
+    opacity: 1;
+}
+
+.note {
+    font-size: 0.75rem;
+    opacity: 0.4;
+    margin-top: 3rem;
+    letter-spacing: 2px;
+}
+
+#rickmodal {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.92);
+    z-index: 10000;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+#rickmodal.active {
+    display: flex;
+    animation: flashIn 0.15s ease;
+}
+
+@keyframes flashIn {
+    0% {
+        background: rgba(255, 255, 255, 0.8);
+    }
+
+    100% {
+        background: rgba(0, 0, 0, 0.92);
+    }
+}
+
+#sound-text {
+    font-size: 1.5rem;
+    color: #ff3333;
+    animation: blink 1.5s infinite;
+    margin-bottom: 2rem;
+}
+
+@keyframes blink {
+
+    0%,
+    100% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0.3;
+    }
+}
+
+#ricklabel {
+    font-family: 'VT323', monospace;
+    font-size: 2.5rem;
+    color: #ff3333;
+    text-shadow: 0 0 8px #ff3333;
+    letter-spacing: 6px;
+    animation: pulse 0.8s ease-in-out infinite;
+}
+
+@keyframes pulse {
+
+    0%,
+    100% {
+        text-shadow: 0 0 15px #ff3333;
+    }
+
+    50% {
+        text-shadow: 0 0 40px #ff3333, 0 0 60px #ff000088;
+    }
+}
