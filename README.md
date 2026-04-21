@@ -1,1 +1,1 @@
-press a key ;)
+This is a cool project featuring a CRT terminal like experience for Hack Club, Made by a HackClubber, but for you to truly experience this beauty, you must press any key at https://aahvl.github.io/rick , I hope you enjoy this experience well, and have fun with it. Have a nice day/night, and dont forget to send me a follow on Github (totally not self-advertisement in a random repo of a very cool project featuring a CRT terminal like experience for Hack Club, made by a HackClubber)
